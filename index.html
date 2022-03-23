@@ -13,6 +13,8 @@
         <div class="circle"></div>
         <header>
             <a href="#"><img src="imagens/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation"></ul>
             <ul>
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Menu</a></li>
@@ -51,6 +53,13 @@
         function changeCircleColor(color) {
             const circle = document.querySelector('.circle');
             circle.style.background = color;
+        }
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
         }
     </script>
 </body>
